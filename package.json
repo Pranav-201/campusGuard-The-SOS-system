@@ -1,0 +1,16 @@
+{
+  "name": "wifi-sos",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "predev": "kill-port 3001 5050 8765 5556",
+    "dev": "concurrently -n backend,frontend -c yellow,cyan \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cross-env HTTP_PORT=5050 backend\\.venv\\Scripts\\python.exe backend\\server.py",
+    "dev:frontend": "cd frontend && cross-env PORT=3001 REACT_APP_API_BASE_URL=http://localhost:5050/api npm start"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "cross-env": "^7.0.3",
+    "kill-port": "^2.0.1"
+  }
+}
