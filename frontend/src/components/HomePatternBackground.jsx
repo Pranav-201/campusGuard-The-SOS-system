@@ -67,7 +67,7 @@ const StyledWrapper = styled.div`
     filter: blur(72px);
     opacity: 0.34;
     animation: driftGlow 10s ease-in-out infinite alternate;
-    background: radial-gradient(circle, rgba(224, 0, 42, 0.34) 0%, rgba(255, 107, 53, 0.16) 34%, rgba(255, 255, 255, 0) 72%);
+    background: radial-gradient(circle, rgb(255, 255, 255) 0%, rgba(253, 253, 253, 0.98) 34%, rgb(255, 255, 255) 72%);
   }
 
   .red-glow-primary {

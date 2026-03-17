@@ -10,7 +10,7 @@ import StartupLoader from './components/StartupLoader';
 import topbarLogo from './assets/logo.png';
 import './index.css';
 
-const API_BASE = process.env.REACT_APP_API_BASE_URL || '/api';
+const API_BASE = `${window.location.protocol}//${window.location.hostname}:5000/api`;
 const TARGETED_RING_ROLES = new Set(['security guard', 'batch guardian']);
 
 function normalizeRole(role) {
@@ -34,7 +34,7 @@ function hasRingEligibleActiveAlerts(alerts, responderRole) {
   );
 }
 
-// â”€â”€â”€ Context â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+
 export const AppContext = createContext(null);
 const AUTHORITY_PASSKEY = '123456';
 
@@ -74,7 +74,7 @@ function Sidebar({ mobileOpen, onNavigate, onCloseMenu }) {
   );
 }
 
-// â”€â”€â”€ Topbar â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+
 function Topbar({ activeAlerts, onMenuToggle, isMenuOpen }) {
   const location = useLocation();
   const isSOSPage = location.pathname === '/';
