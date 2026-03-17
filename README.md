@@ -37,11 +37,8 @@ A **real-time, location-aware emergency alert system** for campuses and hostels,
 - Node.js 16+
 - npm
 
-### One-command start
-```bash
-chmod +x start.sh
-./start.sh
-```
+### One command start
+- npm run dev
 
 ### Manual start
 ```bash
