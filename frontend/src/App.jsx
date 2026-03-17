@@ -288,7 +288,7 @@ export default function App() {
 
   // Load initial data
   const fetchAlerts = () => {
-    fetch(`${API_BASE}/alerts?limit=50`)
+    fetch(`${API_BASE}/alerts?limit=150`)
       .then(r => r.json())
       .then(d => setAlerts(d.alerts || []))
       .catch(() => {});
