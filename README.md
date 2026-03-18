@@ -1,5 +1,4 @@
 # 📡 Wi-Fi SOS — Campus Emergency Alert System
-# Author: Pranav Amrutkar.
 
 A **real-time, location-aware emergency alert system** for campuses and hostels, built with Python (Flask + asyncio) for the backend and React for the frontend. Uses **UDP broadcast** for fast dissemination and **TCP** for reliable direct delivery to responders.
 
